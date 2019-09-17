@@ -1,4 +1,5 @@
-# When done, submit this entire file to the autograder.
+# Vishaal Makani
+# CSCE 431 - 502
 
 # Part 1
 
