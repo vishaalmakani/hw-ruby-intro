@@ -28,7 +28,26 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  #returns true if any two elements in the array of integers sum to n
+  sum = 0
+  if arr.empty? == true || arr.length == 1
+    return false
+  else
+    arr = arr.sort
+    left = 0
+    right = arr.length-1
+    while left < right
+      sum = arr[left]+arr[right]
+      if sum == n
+        return true
+      elsif sum < n
+        left+=1
+      elsif sum > n
+        right-=1
+      end
+    end
+    return false
+  end
 end
 
 # Part 2
