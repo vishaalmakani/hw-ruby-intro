@@ -72,6 +72,14 @@ end
 
 def binary_multiple_of_4? s
   # takes a string and returns true if the string represents a binary number that is a multiple of 4.
+  num_10 = s.to_i(2)
+  if s.include?('0') && s.length == 1 #.to_i(2) returns 0 even when it isn't a valid binary string, 
+    return true                       #had to differentiate a valid 0 from invalid binary 0
+  elsif num_10 == 0 || s.length == 0  #invalid binary or empty string return false
+    return false
+  elsif (num_10 % 4) == 0
+    return true
+  end
 end
 
 # Part 3
