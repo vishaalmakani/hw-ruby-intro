@@ -3,11 +3,28 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  sum = 0
+  if arr.empty? == true
+    return 0
+  else
+    arr.each { |x| sum+=x}
+    return sum
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  # computes the sum of the max two elements in an array
+  sum = 0
+  length = arr.length
+  if arr.empty? == true
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  else
+    arr = arr.sort
+    sum = arr[length-1]+arr[length-2]
+    return sum
+  end
 end
 
 def sum_to_n? arr, n
